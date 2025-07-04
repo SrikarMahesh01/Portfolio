@@ -1,0 +1,5 @@
+Create a 3d design portfolio for the above uploaded one and choose a professional color gradient pattern and make sure the portfolio looks good and overall it must be a awesome looking one.
+
+not a basic one but i need it to look like having a navigation bar and highlighting the name and the each and every wing must be opened in a new page and then  it should display the profile picture also and then make it design like a background animation design like a loop and in a home page when i scrolled down make sure to show the cards and put the information like the experince and other things and the cards should move from left to right.
+
+in the page of the awards and the achievements like the dots patterns make sure to add the medals and the cups to fill the whole page in the background and it should be black and white then it should have a animations which should move slowly from left to right. keep the samee content donot change any ui which was there already keep the same light background and then the animations should be behind it. 

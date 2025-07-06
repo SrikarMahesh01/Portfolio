@@ -1,0 +1,18 @@
+INSTRUCTIONS FOR UPDATING PROFILE PICTURE:
+
+1. Save the new profile picture image as "profile-photo.jpg" in the public folder
+2. The image should be placed at: c:\Users\srika\OneDrive\Desktop\YSM\Code\Portfolio\portfolio\public\profile-photo.jpg
+3. Make sure the file is named exactly "profile-photo.jpg" (lowercase, with hyphen)
+4. The image will automatically appear in the Hero section once saved
+
+RECOMMENDED IMAGE SPECIFICATIONS:
+- Format: JPG
+- Size: At least 500x500 pixels for best quality
+- Aspect Ratio: Square (1:1) works best for circular display
+- File Size: Keep under 1MB for faster loading
+
+The Hero section is now configured to display the profile picture with:
+- Circular border with blue accent
+- Responsive sizing for all devices
+- Smooth animations and hover effects
+- Error fallback with initials if image fails to load

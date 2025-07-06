@@ -49,43 +49,44 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="pt-24 pb-16 bg-gray-900 text-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-14 md:pb-16 bg-gray-900 text-gray-100">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-10 md:mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Contact Me</h2>
-          <div className="w-20 h-1 bg-blue-400 mx-auto"></div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-white px-2">Contact Me</h2>
+          <div className="w-16 sm:w-18 md:w-20 h-0.5 sm:h-1 bg-blue-400 mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
+            className="mx-2 sm:mx-0"
           >
-            <h3 className="text-2xl font-semibold mb-6 text-white">Get In Touch</h3>
-            <p className="text-gray-300 mb-8">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-5 md:mb-6 text-white">Get In Touch</h3>
+            <p className="text-gray-300 mb-6 sm:mb-7 md:mb-8 text-sm sm:text-base leading-relaxed">
               Feel free to contact me for any academic collaborations, research opportunities, 
               or speaking engagements. I&apos;m always open to discussing new projects and ideas.
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
-                  <FaEnvelope className="text-blue-400" />
+                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
+                  <FaEnvelope className="text-blue-400 text-base sm:text-lg" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-medium mb-1 text-white">Email</h4>
+                <div className="min-w-0 flex-1">
+                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">Email</h4>
                   <a 
                     href="mailto:satyasreekpnv@gmail.com" 
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-all"
                   >
                     satyasreekpnv@gmail.com
                   </a>
@@ -93,14 +94,14 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
-                  <FaPhone className="text-blue-400" />
+                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
+                  <FaPhone className="text-blue-400 text-base sm:text-lg" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium mb-1 text-white">Phone</h4>
+                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">Phone</h4>
                   <a 
                     href="tel:+919032798749" 
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base"
                   >
                     +91 9032798749
                   </a>
@@ -108,16 +109,16 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
-                  <FaLinkedin className="text-blue-400" />
+                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
+                  <FaLinkedin className="text-blue-400 text-base sm:text-lg" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-medium mb-1 text-white">LinkedIn</h4>
+                <div className="min-w-0 flex-1">
+                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">LinkedIn</h4>
                   <a 
                     href="https://www.linkedin.com/in/satyasreekpnv/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-words"
                   >
                     Connect on LinkedIn
                   </a>
@@ -125,16 +126,16 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
-                  <FaGraduationCap className="text-blue-400" />
+                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
+                  <FaGraduationCap className="text-blue-400 text-base sm:text-lg" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-medium mb-1 text-white">Google Scholar</h4>
+                <div className="min-w-0 flex-1">
+                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">Google Scholar</h4>
                   <a 
                     href="https://scholar.google.com/citations?user=3wmgrOMAAAAJ&hl=en" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-words"
                   >
                     View Google Scholar Profile
                   </a>
@@ -142,16 +143,16 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
-                  <FaBook className="text-blue-400" />
+                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
+                  <FaBook className="text-blue-400 text-base sm:text-lg" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-medium mb-1 text-white">Scopus</h4>
+                <div className="min-w-0 flex-1">
+                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">Scopus</h4>
                   <a 
                     href="https://www.scopus.com/authid/detail.uri?authorId=57218874914" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-words"
                   >
                     View Scopus Profile
                   </a>
@@ -159,16 +160,16 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
-                  <SiOrcid className="text-blue-400" />
+                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
+                  <SiOrcid className="text-blue-400 text-base sm:text-lg" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-medium mb-1 text-white">ORCID</h4>
+                <div className="min-w-0 flex-1">
+                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">ORCID</h4>
                   <a 
                     href="https://orcid.org/0000-0003-4567-3447" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-words"
                   >
                     View ORCID Profile
                   </a>
@@ -267,6 +268,7 @@ const Contact = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors disabled:opacity-70 disabled:cursor-not-allowed w-full"
+                suppressHydrationWarning
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>

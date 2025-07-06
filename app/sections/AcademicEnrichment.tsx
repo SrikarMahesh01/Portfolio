@@ -155,7 +155,7 @@ const AcademicEnrichment = () => {
         {
           id: 7,
           title: "Advanced Computing Redefined: Exploring AI, Quantum Computing and Cyber Security Synergies",
-          organizer: "SHREEYASH PRATISHTHAN'S, SHREEYASH COLLEGE OF ENGINEERING & TECHNOLOGY",
+          organizer: "SHREEYASH PRATISHTHAN&apos;S, SHREEYASH COLLEGE OF ENGINEERING & TECHNOLOGY",
           date: "Nov 25th – 30th 2024"
         },
         {
@@ -175,32 +175,32 @@ const AcademicEnrichment = () => {
   };
 
   return (
-    <section id="academic-enrichment" className="pt-24 pb-16 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="academic-enrichment" className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-14 md:pb-16 bg-gray-100">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-10 md:mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Academic Enrichment</h2>
-          <div className="w-24 h-1.5 bg-blue-400 mx-auto"></div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-gray-900 px-2">Academic Enrichment</h2>
+          <div className="w-16 sm:w-20 md:w-24 h-1 sm:h-1.5 bg-blue-400 mx-auto"></div>
         </motion.div>
 
         {/* Coordinated Workshops Section */}
-        <div className="mb-16">
+        <div className="mb-12 sm:mb-14 md:mb-16">
           <motion.h3
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold mb-8 text-gray-800 flex items-center"
+            className="text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-7 md:mb-8 text-gray-800 flex items-center px-2"
           >
-            <FaChalkboardTeacher className="text-blue-500 mr-3" />
-            Coordinated Funded Workshop/FDP's/STTP's
+            <FaChalkboardTeacher className="text-blue-500 mr-2 sm:mr-3 text-lg sm:text-xl" />
+            <span className="leading-tight">Coordinated Funded Workshop/FDP&apos;s/STTP&apos;s</span>
           </motion.h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {workshops.coordinated.map((workshop) => (
               <motion.div
                 key={workshop.id}
@@ -208,21 +208,21 @@ const AcademicEnrichment = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white/75 backdrop-blur-sm p-6 rounded-xl shadow-lg"
+                className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
               >
-                <h4 className="text-xl font-semibold mb-3 text-gray-800">{workshop.title}</h4>
-                <p className="text-gray-600 mb-2">{workshop.description}</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{workshop.title}</h4>
+                <p className="text-sm sm:text-base text-gray-600 mb-2 leading-relaxed">{workshop.description}</p>
                 {workshop.slots ? (
-                  <ul className="list-disc list-inside text-gray-600 ml-4">
+                  <ul className="list-disc list-inside text-sm sm:text-base text-gray-600 ml-2 sm:ml-4 space-y-1">
                     {workshop.slots.map((slot, index) => (
-                      <li key={index} className="mb-1">{slot}</li>
+                      <li key={index} className="leading-relaxed">{slot}</li>
                     ))}
                   </ul>
                 ) : (
                   <>
-                    <p className="text-gray-500">{workshop.date}</p>
+                    <p className="text-sm sm:text-base text-gray-500">{workshop.date}</p>
                     {workshop.location && (
-                      <p className="text-gray-500 italic">{workshop.location}</p>
+                      <p className="text-sm sm:text-base text-gray-500 italic mt-1">{workshop.location}</p>
                     )}
                   </>
                 )}
@@ -232,18 +232,18 @@ const AcademicEnrichment = () => {
         </div>
 
         {/* AICTE Funded Projects Section */}
-        <div className="mb-16">
+        <div className="mb-12 sm:mb-14 md:mb-16">
           <motion.h3
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold mb-8 text-gray-800 flex items-center"
+            className="text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-7 md:mb-8 text-gray-800 flex items-center px-2"
           >
-            <FaProjectDiagram className="text-blue-500 mr-3" />
-            AICTE Funded Projects
+            <FaProjectDiagram className="text-blue-500 mr-2 sm:mr-3 text-lg sm:text-xl" />
+            <span className="leading-tight">AICTE Funded Projects</span>
           </motion.h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {workshops.aicteProjects.map((project) => (
               <motion.div
                 key={project.id}
@@ -251,12 +251,12 @@ const AcademicEnrichment = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white/75 backdrop-blur-sm p-6 rounded-xl shadow-lg"
+                className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
               >
-                <h4 className="text-xl font-semibold mb-3 text-gray-800">{project.title}</h4>
-                <p className="text-blue-600 font-semibold mb-2">₹{project.amount}</p>
-                <p className="text-gray-600 mb-2">{project.description}</p>
-                <p className="text-gray-500">{project.date || project.period}</p>
+                <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{project.title}</h4>
+                <p className="text-blue-600 font-semibold mb-2 text-sm sm:text-base">₹{project.amount}</p>
+                <p className="text-sm sm:text-base text-gray-600 mb-2 leading-relaxed">{project.description}</p>
+                <p className="text-sm sm:text-base text-gray-500">{project.date || project.period}</p>
               </motion.div>
             ))}
           </div>
@@ -269,16 +269,16 @@ const AcademicEnrichment = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold mb-8 text-gray-800 flex items-center"
+            className="text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-7 md:mb-8 text-gray-800 flex items-center px-2"
           >
-            <FaGraduationCap className="text-blue-500 mr-3" />
-            Workshops Attended
+            <FaGraduationCap className="text-blue-500 mr-2 sm:mr-3 text-lg sm:text-xl" />
+            <span className="leading-tight">Workshops Attended</span>
           </motion.h3>
 
           {/* STTP Section */}
-          <div className="mb-8">
-            <h4 className="text-xl font-semibold mb-6 text-gray-700">Short Term Training Programs</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mb-6 sm:mb-7 md:mb-8">
+            <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-5 md:mb-6 text-gray-700 px-2">Short Term Training Programs</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {workshops.attended.sttp.map((sttp) => (
                 <motion.div
                   key={sttp.id}
@@ -286,20 +286,20 @@ const AcademicEnrichment = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                   viewport={{ once: true }}
-                  className="bg-white/75 backdrop-blur-sm p-6 rounded-xl shadow-lg"
+                  className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
                 >
-                  <h5 className="text-lg font-semibold mb-3 text-gray-800">{sttp.title}</h5>
-                  <p className="text-gray-600 mb-2">{sttp.organizer}</p>
-                  <p className="text-gray-500">{sttp.date}</p>
+                  <h5 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{sttp.title}</h5>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-2 leading-relaxed">{sttp.organizer}</p>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-500">{sttp.date}</p>
                 </motion.div>
               ))}
             </div>
           </div>
 
           {/* FDP Section */}
-          <div className="mb-8">
-            <h4 className="text-xl font-semibold mb-6 text-gray-700">Faculty Development Programmes</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mb-6 sm:mb-7 md:mb-8">
+            <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-5 md:mb-6 text-gray-700 px-2">Faculty Development Programmes</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {workshops.attended.fdp.map((fdp) => (
                 <motion.div
                   key={fdp.id}
@@ -307,11 +307,11 @@ const AcademicEnrichment = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                   viewport={{ once: true }}
-                  className="bg-white/75 backdrop-blur-sm p-6 rounded-xl shadow-lg"
+                  className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
                 >
-                  <h5 className="text-lg font-semibold mb-3 text-gray-800">{fdp.title}</h5>
-                  {fdp.type && <p className="text-gray-600 mb-2">{fdp.type}</p>}
-                  <p className="text-gray-500">{fdp.date}</p>
+                  <h5 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{fdp.title}</h5>
+                  {fdp.type && <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-2 leading-relaxed">{fdp.type}</p>}
+                  <p className="text-xs sm:text-sm md:text-base text-gray-500">{fdp.date}</p>
                 </motion.div>
               ))}
             </div>
@@ -319,8 +319,8 @@ const AcademicEnrichment = () => {
 
           {/* ATAL FDP Section */}
           <div>
-            <h4 className="text-xl font-semibold mb-6 text-gray-700">ATAL FDPs</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-4 sm:mb-5 md:mb-6 text-gray-700 px-2">ATAL FDPs</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {workshops.attended.atal.map((atal) => (
                 <motion.div
                   key={atal.id}
@@ -328,11 +328,11 @@ const AcademicEnrichment = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                   viewport={{ once: true }}
-                  className="bg-white/75 backdrop-blur-sm p-6 rounded-xl shadow-lg"
+                  className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
                 >
-                  <h5 className="text-lg font-semibold mb-3 text-gray-800">{atal.title}</h5>
-                  <p className="text-gray-600 mb-2">{atal.organizer}</p>
-                  <p className="text-gray-500">{atal.date}</p>
+                  <h5 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{atal.title}</h5>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-2 leading-relaxed">{atal.organizer}</p>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-500">{atal.date}</p>
                 </motion.div>
               ))}
             </div>

@@ -70,8 +70,8 @@ const Experience = () => {
         </motion.div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-600"></div>
+          {/* Timeline line - hidden on mobile and tablet */}
+          <div className="hidden xl:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-600"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -84,8 +84,8 @@ const Experience = () => {
                 className="relative"
               >
                 <div className={`md:flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                  {/* Timeline dot */}
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-400 z-10"></div>
+                  {/* Timeline dot - hidden on mobile and tablet */}
+                  <div className="hidden xl:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-400 z-10"></div>
 
                   {/* Content */}
                   <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>

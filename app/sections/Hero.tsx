@@ -2,39 +2,37 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
-import { FaArrowDown } from "react-icons/fa";
 import DotPattern from "../components/DotPattern";
 
 const Hero = () => {
   const [imageError, setImageError] = useState(false);
 
   return (
-    <section id="home" className="relative pt-40 pb-8 md:pt-52 md:pb-8 min-h-screen flex flex-col justify-between">
+    <section id="home" className="hero-section relative pt-8 sm:pt-12 md:pt-40 lg:pt-52 pb-6 sm:pb-8 min-h-screen flex flex-col justify-center">
       <DotPattern isDark={true} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full relative flex-1 flex items-center">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12 w-full">
           <motion.div 
-            className="md:w-1/2"
+            className="md:w-1/2 text-center md:text-left"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 leading-tight">
               Dr. K P N V <span className="text-blue-400">Satya Sree</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl font-medium text-gray-300 mb-8">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-300 mb-6 sm:mb-7 md:mb-8">
               Professor & HOD of AI
             </h2>
-            <p className="text-gray-300 mb-10 text-xl leading-relaxed">
+            <p className="text-gray-300 mb-8 sm:mb-9 md:mb-10 text-base sm:text-lg md:text-xl leading-relaxed px-2 md:px-0">
               With over 23 years of experience in teaching Computer Science & Engineering subjects,
               specializing in Artificial Intelligence, Machine Learning, and Data Mining.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start">
               <Link 
                 href="#contact" 
-                className="relative px-10 py-4 text-lg font-medium rounded-full text-white overflow-hidden group"
+                className="relative px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 text-base sm:text-lg font-medium rounded-full text-white overflow-hidden group"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 opacity-70 blur-sm group-hover:opacity-100 transition duration-300 ease-in-out"></span>
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-purple-700 transition duration-300 ease-in-out"></span>
@@ -45,44 +43,37 @@ const Hero = () => {
             </div>
           </motion.div>
           <motion.div 
-            className="md:w-1/2 flex justify-center mt-8 md:mt-0"
+            className="md:w-1/2 flex justify-center mt-6 sm:mt-7 md:mt-8 lg:mt-0"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-4 border-blue-400">
-              {imageError ? (
-                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-6xl font-bold">
-                  KS
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px] xl:w-[500px] xl:h-[500px] rounded-full overflow-hidden border-4 border-blue-400 shadow-2xl">
+              <img 
+                src="/profile-photo.jpg?v=static-105"
+                alt="Dr. K P N V Satya Sree - Professor & HOD of AI" 
+                className="w-full h-full rounded-full"
+                style={{ 
+                  objectFit: 'cover',
+                  objectPosition: 'center 105%'
+                }}
+                onError={(e) => {
+                  console.log('Regular img failed to load:', e);
+                  setImageError(true);
+                }}
+                onLoad={() => {
+                  console.log('Regular img loaded successfully');
+                  setImageError(false);
+                }}
+              />
+              {imageError && (
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl sm:text-5xl md:text-6xl font-bold">
+                  DS
                 </div>
-              ) : (
-                <Image 
-                  src="/profile-photo.jpg" 
-                  alt="Dr. K P N V Satya Sree" 
-                  fill
-                  style={{ 
-                    objectFit: 'cover',
-                    objectPosition: 'center 10%'
-                  }}
-                  priority
-                  onError={() => setImageError(true)}
-                />
               )}
             </div>
           </motion.div>
         </div>
-      </div>
-      <div className="mt-auto mb-2 flex justify-center">
-        <motion.a 
-          href="#about"
-          className="text-gray-300 hover:text-blue-400 transition-colors"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          aria-label="Scroll to About section"
-        >
-          <FaArrowDown className="animate-bounce text-2xl" />
-        </motion.a>
       </div>
     </section>
   );

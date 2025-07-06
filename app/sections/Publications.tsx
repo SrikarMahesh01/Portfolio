@@ -551,7 +551,8 @@ const Publications = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white">Publications</h2>
             <button
               onClick={() => setShowPdfViewer(true)}
-              className="px-4 py-2 bg-blue-500/85 hover:bg-blue-600/85 backdrop-blur-sm rounded-full text-white flex items-center gap-2 transition-colors"
+              className="hidden xl:flex px-4 py-2 bg-blue-500/85 hover:bg-blue-600/85 backdrop-blur-sm rounded-full text-white items-center gap-2 transition-colors"
+              suppressHydrationWarning
             >
               <FaFilePdf /> View Full List
             </button>
@@ -571,6 +572,7 @@ const Publications = () => {
                 setCurrentPage(1);
               }}
               className="w-full px-4 py-2 rounded-lg bg-gray-800/85 backdrop-blur-sm text-white border border-gray-700 focus:outline-none focus:border-blue-400"
+              suppressHydrationWarning
             />
             <FaSearch className="absolute right-3 top-3 text-gray-400" />
           </div>
@@ -621,6 +623,7 @@ const Publications = () => {
               onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
               className="px-4 py-2 rounded-md bg-gray-800/85 backdrop-blur-sm text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-700/85 transition-colors"
+              suppressHydrationWarning
             >
               Previous
             </button>
@@ -633,6 +636,7 @@ const Publications = () => {
                     ? "bg-blue-500/85 backdrop-blur-sm text-white"
                     : "bg-gray-800/85 backdrop-blur-sm text-white hover:bg-gray-700/85"
                 }`}
+                suppressHydrationWarning
               >
                 {page}
               </button>
@@ -641,6 +645,7 @@ const Publications = () => {
               onClick={() => setCurrentPage(prev => Math.min(prev + 1, pageCount))}
               disabled={currentPage === pageCount}
               className="px-4 py-2 rounded-md bg-gray-800/85 backdrop-blur-sm text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-700/85 transition-colors"
+              suppressHydrationWarning
             >
               Next
             </button>

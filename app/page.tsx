@@ -15,6 +15,7 @@ import Contact from "./sections/Contact";
 import Nptel from "./sections/Nptel";
 import DotPattern from "./components/DotPattern";
 import AcademicEnrichment from "./sections/AcademicEnrichment";
+import ScrollBehavior from "./components/ScrollBehavior";
 
 export default function Home() {
   useEffect(() => {
@@ -35,12 +36,23 @@ export default function Home() {
             // Add offset for the fixed navbar
             const navbarHeight = 80; // Increased navbar height
             const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+            const offsetPosition = elementPosition + window.scrollY - navbarHeight;
             
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
+            // Use smoother scrolling with polyfill support for better mobile experience
+            try {
+              // Try the modern scrollTo with smooth behavior
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+                // Add these properties for iOS momentum scrolling
+                ...(('ontouchstart' in window) ? { 
+                  passive: true,
+                } : {})
+              });
+            } catch (error) {
+              // Fallback for older browsers
+              window.scrollTo(0, offsetPosition);
+            }
           }
         }
       }
@@ -55,6 +67,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
+      {/* Component to handle scroll behavior client-side */}
+      <ScrollBehavior />
       {/* Navbar is fixed and always black */}
       <Navbar />
       

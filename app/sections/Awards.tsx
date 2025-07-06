@@ -115,13 +115,13 @@ const Awards = () => {
   const getIcon = (iconType: string) => {
     switch (iconType) {
       case "trophy":
-        return <FaTrophy className="text-yellow-500 text-2xl" />;
+        return <FaTrophy className="text-yellow-500 text-xl sm:text-2xl flex-shrink-0" />;
       case "medal":
-        return <FaMedal className="text-blue-500 text-2xl" />;
+        return <FaMedal className="text-blue-500 text-xl sm:text-2xl flex-shrink-0" />;
       case "certificate":
-        return <FaCertificate className="text-green-500 text-2xl" />;
+        return <FaCertificate className="text-green-500 text-xl sm:text-2xl flex-shrink-0" />;
       default:
-        return <FaTrophy className="text-yellow-500 text-2xl" />;
+        return <FaTrophy className="text-yellow-500 text-xl sm:text-2xl flex-shrink-0" />;
     }
   };
 
@@ -143,7 +143,7 @@ const Awards = () => {
           <div className="w-24 h-1.5 bg-blue-400 mx-auto"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {awards.map((award, index) => (
             <motion.div
               key={award.id}
@@ -151,19 +151,21 @@ const Awards = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white/75 backdrop-blur-sm rounded-xl shadow-lg p-6 relative overflow-hidden group hover:shadow-xl transition-shadow"
+              className="bg-white/75 backdrop-blur-sm rounded-xl shadow-lg p-4 sm:p-6 relative overflow-hidden group hover:shadow-xl transition-shadow"
             >
               <div className="relative z-10">
-                <div className="flex items-start mb-4">
-                  <div className="mr-4 mt-1">{getIcon(award.icon)}</div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{award.title}</h3>
-                    <p className="text-gray-600 mb-1">{award.organization}</p>
-                    <p className="text-blue-500 font-medium">{award.year}</p>
+                <div className="flex items-start mb-4 gap-3 sm:gap-4">
+                  <div className="flex-shrink-0 mt-1">
+                    {getIcon(award.icon)}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 leading-tight break-words">{award.title}</h3>
+                    <p className="text-gray-600 mb-1 text-sm sm:text-base break-words">{award.organization}</p>
+                    <p className="text-blue-500 font-medium text-sm sm:text-base">{award.year}</p>
                   </div>
                 </div>
                 {award.description && (
-                  <p className="text-gray-700 text-sm mt-auto">{award.description}</p>
+                  <p className="text-gray-700 text-xs sm:text-sm mt-auto leading-relaxed break-words">{award.description}</p>
                 )}
               </div>
             </motion.div>

@@ -23,11 +23,11 @@ const Education = () => {
     },
     {
       id: 3,
-      degree: "B Level Master's Diploma in Computer Applications",
+      degree: "B Level Master's Degree in Computer Applications",
       institution: "DOEACC Society",
       location: "New Delhi, India",
       period: "July 1998 - July 2001",
-      description: "Master's Diploma in Computer Applications - Computer Science (Affiliated by AICTE)",
+      description: "Master's Degree in Computer Applications - Computer Science (Affiliated by AICTE)",
     },
     {
       id: 4,

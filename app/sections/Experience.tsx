@@ -11,7 +11,6 @@ const Experience = () => {
       title: "Professor",
       company: "Usha Rama College of Engineering and Technology",
       location: "Gannavaram, India",
-      description: "Handling All the Computer Science & Engineering subjects (like Artificial Intelligence and Neural Networks, Computer Vision, Machine Learning, Deep Learning Techniques, Cyber Security, IOT, Data ware Housing & Data Mining, Advanced operating systems.)",
     },
     {
       id: 2,
@@ -19,7 +18,6 @@ const Experience = () => {
       title: "Associate Professor",
       company: "Vignan's Nirula Institute of Technology and Science for Women",
       location: "Guntur, India",
-      description: "Handled All the Computer Science & Engineering subjects (like Artificial Intelligence, Computer organization and its architectures, Data Warehouse and Data mining, Neural Networks, Security of Databases and Auditing, C& Data Structures, Hadoop and Big Data, Simulation & Modeling, DBMS and Hadoop lab.",
     },
     {
       id: 3,
@@ -27,7 +25,6 @@ const Experience = () => {
       title: "Associate Professor",
       company: "Nalanda Institute of Engineering & Technology",
       location: "Guntur, India",
-      description: "Handled All the Computer Science & Information Technology Subjects (like Microsoft Office, Artificial Intelligence, Computer graphics, Operating systems, Computer organization and its architectures, Computer Networks, Unix & Shell Programming, DBMS.",
     },
     {
       id: 4,
@@ -35,7 +32,6 @@ const Experience = () => {
       title: "Associate Professor",
       company: "ASR College of Engineering",
       location: "Tanuku, India",
-      description: "Handled All the Computer Science & Information Technology Subjects (like Microsoft Office, Artificial Intelligence, Computer graphics, Operating systems, Computer organization and its architectures, Computer Networks, Unix & Shell Programming, DBMS.",
     },
     {
       id: 5,
@@ -43,7 +39,6 @@ const Experience = () => {
       title: "Associate Professor",
       company: "Godavari Institute of Engineering & Technology",
       location: "Rajahmundry, India",
-      description: "Handled All the Computer Science & Information Technology Subjects (like Microsoft Office, RDBMS, Artificial Intelligence, Computer graphics, Operating systems, Computer organization and its architectures, Computer Networks, Unix & Shell Programming, Distributed Systems, C & Data structures). Also handled Computer Laboratories and served as Internal Placement Officer & Coordinating Placement Activities.",
     },
     {
       id: 6,
@@ -51,7 +46,6 @@ const Experience = () => {
       title: "Lecturer",
       company: "ASR College of Engineering",
       location: "Kovvur, India",
-      description: "Handled All the Computer Science & Information Technology Subjects (like Microsoft Office, Micro Processors & Its Architectures (8085 & 86), RDBMS, Computer Networks, Operating Systems, C & Data structures). Also handled Computer Laboratories.",
     },
   ];
 
@@ -106,7 +100,6 @@ const Experience = () => {
                         <FaCalendarAlt className="text-gray-400 text-lg mr-3" />
                         <p className="text-gray-400">{exp.period}</p>
                       </div>
-                      <p className="text-gray-300">{exp.description}</p>
                     </div>
                   </div>
                 </div>
@@ -114,6 +107,41 @@ const Experience = () => {
             ))}
           </div>
         </div>
+
+        {/* Single description block for all positions */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <div className="bg-gray-800/75 backdrop-blur-sm p-8 rounded-3xl shadow-md">
+            <h3 className="text-2xl font-semibold text-white mb-6 text-center">Professional Journey Overview</h3>
+            <div className="text-gray-300 leading-relaxed space-y-4">
+              <p>
+                Throughout my 23+ years of academic career, I have been dedicated to excellence in teaching Computer Science & Engineering subjects, 
+                with a special focus on Artificial Intelligence, Machine Learning, and emerging technologies. My journey began as a Lecturer and 
+                progressively advanced to Professor and Head of Department positions.
+              </p>
+              <p>
+                During my tenure at various prestigious institutions, I have consistently contributed to curriculum development, research initiatives, 
+                and student mentorship. My experience spans across multiple colleges, allowing me to adapt to different academic environments and 
+                contribute to the growth of Computer Science education in the region.
+              </p>
+              <p>
+                Key contributions include developing innovative teaching methodologies for AI and ML subjects, supervising research projects, 
+                publishing academic papers, and fostering industry-academia collaborations. I have also been actively involved in academic 
+                administration, program accreditation, and faculty development initiatives.
+              </p>
+              <p>
+                My commitment to staying current with technological advancements has enabled me to introduce cutting-edge topics like Deep Learning, 
+                Computer Vision, Cyber Security, Blockchain Technology, and IoT into the academic curriculum, preparing students for the evolving 
+                demands of the technology industry.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -49,7 +49,7 @@ export default function Home() {
                   passive: true,
                 } : {})
               });
-            } catch (error) {
+            } catch {
               // Fallback for older browsers
               window.scrollTo(0, offsetPosition);
             }

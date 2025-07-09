@@ -61,7 +61,7 @@ const About = () => {
               </div>
               <ul className="space-y-3 text-gray-700">
                 <li><span className="font-medium">Name:</span> <span className="text-base">K P N V Satya Sree</span></li>
-                <li className="text-lg"><span className="font-medium">Age:</span> 45</li>
+                <li className="text-lg"><span className="font-medium">Age:</span> 46</li>
                 <li className="text-lg"><span className="font-medium">Nationality:</span> Indian</li>
                 <li className="text-lg"><span className="font-medium">Location:</span> India</li>
               </ul>
@@ -75,7 +75,7 @@ const About = () => {
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li><span className="font-medium">PhD:</span> Computer Science & Engineering</li>
                 <li><span className="font-medium">M.E:</span> Computer Science</li>
-                <li><span className="font-medium">B Level:</span> Master&apos;s Diploma in Computer Applications</li>
+                <li><span className="font-medium">B Level:</span> Master&apos;s Degree in Computer Applications</li>
               </ul>
             </div>
 
@@ -90,6 +90,8 @@ const About = () => {
                 <li>Deep Learning</li>
                 <li>Data Mining</li>
                 <li>Computer Vision</li>
+                <li>Computer Organisation</li>
+                <li>Operating System</li>
               </ul>
             </div>
 

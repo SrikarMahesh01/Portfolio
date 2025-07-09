@@ -8,17 +8,13 @@ export default function ScrollBehavior() {
     // Force enable smooth scrolling across the site
     document.documentElement.style.scrollBehavior = 'smooth';
     
-    // Handle touch events for mobile
-    let touchStartY = 0;
-    let touchEndY = 0;
-    
-    const handleTouchStart = (e: TouchEvent) => {
-      touchStartY = e.changedTouches[0].screenY;
+    // Enable momentum scrolling on mobile devices
+    const handleTouchStart = () => {
+      // Touch start handler - keep this for better touch performance
     };
     
-    const handleTouchEnd = (e: TouchEvent) => {
-      touchEndY = e.changedTouches[0].screenY;
-      // Add any custom scroll behavior if needed
+    const handleTouchEnd = () => {
+      // Touch end handler - keep this for better touch performance
     };
     
     // Add event listeners with passive option for better performance
